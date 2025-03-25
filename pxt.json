@@ -11,7 +11,9 @@
         "main.ts",
         "README.md",
         "demo.ts",
-        "demo.cpp"
+        "demo.cpp",
+        "shims.d.ts",
+        "enums.d.ts"
     ],
     "testFiles": [
         "test.ts"
@@ -23,5 +25,23 @@
     "supportedTargets": [
         "microbit"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "yotta": {
+        "config": {
+            "codal": {
+                "DEVICE_DMESG_BUFFER_SIZE": 0,
+                "DMESG_SERIAL_DEBUG": 0,
+                "MICROBIT_DMESG_LEVEL": 0,
+                "SOFTDEVICE_PRESENT": 1,
+                "DEVICE_BLE": 1,
+                "MICROBIT_BLE_ENABLED": 1,
+                "MICROBIT_BLE_PAIRING_MODE": 1,
+                "MICROBIT_BLE_DFU_SERVICE": 1,
+                "MICROBIT_BLE_DEVICE_INFORMATION_SERVICE": 1,
+                "MICROBIT_BLE_EVENT_SERVICE": 1,
+                "MICROBIT_BLE_PARTIAL_FLASHING": 1,
+                "MICROBIT_BLE_SECURITY_LEVEL": "SECURITY_MODE_ENCRYPTION_NO_MITM"
+            }
+        }
+    }
 }
