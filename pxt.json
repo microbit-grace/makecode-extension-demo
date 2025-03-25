@@ -6,7 +6,13 @@
     "radio": "*",
     "microphone": "*"
   },
-  "files": ["main.blocks", "main.ts", "log-read-data.cpp", "README.md"],
+  "files": [
+    "main.blocks",
+    "shims.d.ts",
+    "main.ts",
+    "log-read-data.cpp",
+    "README.md"
+  ],
   "testFiles": ["test.ts"],
   "targetVersions": {
     "target": "7.0.57",
