@@ -6,10 +6,11 @@
 declare namespace demo {
 
     /**
-     *  Demo C++ function
+     *  Starts the Bluetooth UART service
      */
-    //% blockId=some_function block="some function" shim=demo::someFunction
-    function someFunction(): void;
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" shim=demo::startUartService
+    function startUartService(): void;
 }
 
 // Auto-generated. Do not edit. Really.
