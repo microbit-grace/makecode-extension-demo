@@ -7,8 +7,6 @@
         "microphone": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
         "demo.ts",
         "demo.cpp",
@@ -16,7 +14,8 @@
         "enums.d.ts"
     ],
     "testFiles": [
-        "test.ts"
+        "main.blocks",
+        "main.ts"
     ],
     "targetVersions": {
         "target": "7.0.57",
@@ -43,5 +42,8 @@
                 "MICROBIT_BLE_SECURITY_LEVEL": "SECURITY_MODE_ENCRYPTION_NO_MITM"
             }
         }
-    }
+    },
+    "disablesVariants": [
+        "mbdal"
+    ]
 }

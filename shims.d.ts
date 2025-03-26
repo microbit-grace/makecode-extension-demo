@@ -8,9 +8,14 @@ declare namespace demo {
     /**
      *  Starts the Bluetooth UART service
      */
-    //% help=bluetooth/start-uart-service
     //% blockId=bluetooth_start_uart_service block="bluetooth uart service" shim=demo::startUartService
     function startUartService(): void;
+
+    /**
+     *  Starts the Bluetooth Utility service
+     */
+    //% blockId=bluetooth_start_utility_service block="bluetooth utility service" shim=demo::startUtilityService
+    function startUtilityService(): void;
 }
 
 // Auto-generated. Do not edit. Really.
