@@ -1,2 +1,3 @@
-demo.cppFunction()
-basic.showIcon(IconNames.Heart)
+demo.cppStartUartService()
+demo.cppStartUtilityService()
+basic.showIcon(IconNames.SmallDiamond)

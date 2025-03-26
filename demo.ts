@@ -38,8 +38,14 @@ namespace demo {
     }
 
     //% shim=demo::startUartService
-    //% block="someCppFunction"
-    export function cppFunction(): void {
+    //% block="start uart service"
+    export function cppStartUartService(): void {
+        return;
+    }
+
+    //% shim=demo::startUtilityService
+    //% block="start utility service"
+    export function cppStartUtilityService(): void {
         return;
     }
 }

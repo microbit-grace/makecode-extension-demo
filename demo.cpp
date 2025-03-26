@@ -27,6 +27,6 @@ namespace demo {
     */
     //% blockId=bluetooth_start_utility_service block="bluetooth utility service"
     void startUtilityService() {
-        utility = new MicroBitUtilityService( *uBit.ble, uBit.messageBus, uBit.storage, uBit.log);
+        MicroBitUtilityService::createShared( *uBit.ble, uBit.messageBus, uBit.storage, uBit.log);
     }
 }
