@@ -48,4 +48,10 @@ namespace demo {
     export function cppStartUtilityService(): void {
         return;
     }
+
+    //% shim=demo::logReadData
+    //% block="log read data"
+    export function cppLogReadData(): void {
+        return;
+    }
 }

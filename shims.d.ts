@@ -16,6 +16,12 @@ declare namespace demo {
      */
     //% blockId=bluetooth_start_utility_service block="bluetooth utility service" shim=demo::startUtilityService
     function startUtilityService(): void;
+
+    /**
+     *  Logs read data
+     */
+    //% blockId=cpp_log_read_data block="cpp log read data" shim=demo::logReadData
+    function logReadData(): void;
 }
 
 // Auto-generated. Do not edit. Really.

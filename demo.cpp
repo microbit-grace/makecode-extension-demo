@@ -29,4 +29,60 @@ namespace demo {
     void startUtilityService() {
         MicroBitUtilityService::createShared( *uBit.ble, uBit.messageBus, uBit.storage, uBit.log);
     }
+
+    /**
+    * Send the data to serial or BLE UART.
+    * @param uart BLE uart service to send to. NULL to send to serial.
+    */
+    void log_sendToUart(const void *data, int len)
+    {
+        bool useUART = uart && uart->getConnected();
+
+        if (useUART)
+            uart->send( (const uint8_t *) data, len);
+        else
+            uBit.serial.send( (uint8_t *) data, len);
+    }
+
+    /**
+    * Send the logged data to serial or BLE UART.
+    * @param uart BLE uart service to send to. NULL to send to serial.
+    * @param format Which data to send
+    */
+    int log_sendDataToUart(DataFormat format)
+    {
+        ManagedBuffer buffer(CONFIG_MICROBIT_LOG_CACHE_BLOCK_SIZE);
+
+        uint32_t length = uBit.log.getDataLength( format);
+        uint32_t index  = 0;
+        uint32_t remain = length;
+        
+        int result = DEVICE_OK;
+
+        while (remain)
+        {
+            uint32_t block = min(buffer.length(), remain);
+
+            result = uBit.log.readData( &buffer[0], index, block, format, length);
+            if (result != DEVICE_OK)
+            {
+                break;
+            }
+            
+            log_sendToUart( &buffer[0], block);
+
+            index += block;
+            remain -= block;
+        }
+        
+        return result;
+    }
+    
+    /**
+    *  Logs read data
+    */
+    //% blockId=cpp_log_read_data block="cpp log read data"
+    void logReadData() {
+        int r = log_sendDataToUart(DataFormat::CSV);
+    }
 }

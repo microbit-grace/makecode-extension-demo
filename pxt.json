@@ -3,8 +3,9 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "datalogger": "*",
+        "bluetooth": "*"
     },
     "files": [
         "README.md",
@@ -40,6 +41,13 @@
                 "MICROBIT_BLE_EVENT_SERVICE": 1,
                 "MICROBIT_BLE_PARTIAL_FLASHING": 1,
                 "MICROBIT_BLE_SECURITY_LEVEL": "SECURITY_MODE_ENCRYPTION_NO_MITM"
+            },
+            "microbit-dal": {
+                "bluetooth": {
+                    "open": 1,
+                    "whitelist": 0,
+                    "security_level": null
+                }
             }
         }
     },
