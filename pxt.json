@@ -6,7 +6,17 @@
     "microphone": "*",
     "datalogger": "*"
   },
-  "files": ["README.md", "demo.ts", "demo.cpp", "shims.d.ts", "enums.d.ts"],
+  "files": [
+    "README.md",
+    "demo.ts",
+    "demo.cpp",
+    "bluetooth.ts",
+    "bluetooth.cpp",
+    "BLEHF2Service.h",
+    "BLEHF2Service.cpp",
+    "shims.d.ts",
+    "enums.d.ts"
+  ],
   "testFiles": ["main.blocks", "main.ts"],
   "targetVersions": {
     "target": "7.0.57",
